@@ -114,8 +114,19 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="w-full h-full cursor-pointer"
-              onClick={() => setIsFlipped(!isFlipped)}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                const swipeThreshold = 50;
+                if (info.offset.x > swipeThreshold) {
+                  handlePrev();
+                } else if (info.offset.x < -swipeThreshold) {
+                  handleNext();
+                }
+              }}
+              className="w-full h-full cursor-pointer touch-pan-y"
+              onTap={() => setIsFlipped(!isFlipped)}
             >
               <div className={cn(
                 "relative w-full h-full transition-all duration-500 preserve-3d",
@@ -197,7 +208,7 @@ export default function App() {
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-black/40 dark:text-white/40 mb-4">Interfaz</h3>
             <p className="text-sm text-black/60 dark:text-white/60 leading-relaxed">
-              La aplicación está optimizada en modo oscuro para una mejor lectura y descanso visual durante el estudio.
+              Optimizado para móviles: puedes deslizar las tarjetas a la izquierda o derecha para navegar, además de usar las flechas.
             </p>
           </div>
           <div>
