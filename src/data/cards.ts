@@ -30,8 +30,8 @@ export const cards: Card[] = [
   { id: 26, category: 'Gramática', question: 'Lista de preposiciones (P-T)', answer: 'Para, por, según, sin, sobre, tras.' },
   { id: 27, category: 'Gramática', question: '¿Qué es una conjunción?', answer: 'Palabra que une palabras u oraciones (y, o, pero).' },
   { id: 28, category: 'Gramática', question: '¿Qué es una interjección?', answer: 'Expresa sentimientos vivos (¡Ay!, ¡Oh!).' },
-  { id: 29, category: 'Gramática', question: 'Morfología: Raíz', answer: 'Parte de la palabra con el significado básico.' },
-  { id: 30, category: 'Gramática', question: 'Morfología: Desinencia', answer: 'Terminación que indica género, número o tiempo.' },
+  { id: 29, category: 'Gramática', question: 'Morfología: Raíz', answer: 'La raíz es el morfema base que contiene el significado fundamental de una palabra, manteniéndose invariable en su familia léxica. En "des-nacion-aliz-a-ción, la raíz es nacion' },
+  { id: 30, category: 'Gramática', question: 'Morfología: Desinencia', answer: 'Terminación que indica género, número o tiempo. Cant-ábamos: La raíz es cant-, la desinencia es -ábamos (indica tiempo, modo, persona y número)' },
 
   // --- SINTAXIS: ENUNCIADO, FRASE Y ORACIÓN (31-60) ---
   { id: 31, category: 'Sintaxis', question: '¿Qué es un enunciado?', answer: 'Unidad mínima de comunicación con sentido completo. Ejemplo: "¡Qué lindo día!" o "Mañana iré al cine".' },
